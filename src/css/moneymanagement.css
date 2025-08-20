@@ -1,0 +1,446 @@
+.money-management {
+  padding: 20px 0;
+}
+
+.money-management .card {
+  padding: 0;
+  overflow: hidden;
+}
+
+.money-management h2 {
+  padding: 20px 20px 0;
+  margin-bottom: 20px;
+}
+
+/* Tabs */
+.tabs {
+  display: flex;
+  overflow-x: auto;
+  background: #2a2f3a;
+  padding: 0 10px;
+  scrollbar-width: none;
+}
+
+.tabs::-webkit-scrollbar {
+  display: none;
+}
+
+.tab {
+  padding: 15px 20px;
+  background: none;
+  border: none;
+  color: #b7bcc7;
+  cursor: pointer;
+  white-space: nowrap;
+  border-bottom: 3px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.tab:hover {
+  color: #e8e9ec;
+}
+
+.tab.active {
+  color: #4ea1ff;
+  border-bottom-color: #4ea1ff;
+}
+
+.swipe-indicator {
+  text-align: center;
+  padding: 10px;
+  background: #2a2f3a;
+  color: #b7bcc7;
+  font-size: 12px;
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .swipe-indicator {
+    display: block;
+  }
+}
+
+/* Tab Content */
+.tab-content {
+  padding: 20px;
+}
+
+.tab-content h3 {
+  margin-bottom: 20px;
+  color: #e8e9ec;
+}
+
+/* Summary Cards */
+.summary-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.summary-card {
+  background: #2a2f3a;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.summary-card h4 {
+  margin: 0 0 10px;
+  color: #b7bcc7;
+  font-size: 14px;
+}
+
+.summary-card .amount {
+  margin: 0;
+  font-size: 24px;
+  font-weight: bold;
+  color: #e8e9ec;
+}
+
+.summary-card.income .amount {
+  color: #6bff8d;
+}
+
+.summary-card.expenses .amount {
+  color: #ff6b6b;
+}
+
+.summary-card.savings.negative .amount {
+  color: #ff6b6b;
+}
+
+.summary-card.savings:not(.negative) .amount {
+  color: #4ea1ff;
+}
+
+/* Charts */
+.charts {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.chart-container {
+  background: #2a2f3a;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.chart-container h4 {
+  margin: 0 0 15px;
+  color: #e8e9ec;
+  text-align: center;
+}
+
+.chart-placeholder {
+  text-align: center;
+  color: #b7bcc7;
+  padding: 40px 0;
+}
+
+.bar-chart, .pie-chart {
+  display: block;
+  margin: 0 auto;
+}
+
+/* Forms */
+.form-section {
+  background: #2a2f3a;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 30px;
+}
+
+.form-section h4 {
+  margin: 0 0 15px;
+  color: #e8e9ec;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+
+@media (max-width: 768px) {
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.label {
+  margin-bottom: 5px;
+  color: #b7bcc7;
+  font-size: 14px;
+}
+
+.input {
+  padding: 10px;
+  border: 1px solid #3a3f4a;
+  background: #1c1f26;
+  color: #e8e9ec;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.input.small {
+  padding: 5px 10px;
+  font-size: 12px;
+}
+
+.input:focus {
+  outline: none;
+  border-color: #4ea1ff;
+}
+
+.checkbox-group {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.checkbox-group input[type="checkbox"] {
+  margin: 0;
+}
+
+/* Tables */
+.list-section h4 {
+  margin: 0 0 15px;
+  color: #e8e9ec;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #2a2f3a;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.table th,
+.table td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid #3a3f4a;
+}
+
+.table th {
+  background: #3a3f4a;
+  color: #b7bcc7;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.table td {
+  color: #e8e9ec;
+  font-size: 14px;
+}
+
+.text-income {
+  color: #6bff8d !important;
+  font-weight: 500;
+}
+
+.text-expense {
+  color: #ff6b6b !important;
+  font-weight: 500;
+}
+
+/* Goals */
+.goals-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.goal-card {
+  background: #2a2f3a;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.goal-card h4 {
+  margin: 0 0 15px;
+  color: #e8e9ec;
+}
+
+.goal-progress {
+  margin-bottom: 15px;
+}
+
+.progress-bar {
+  height: 8px;
+  background: #3a3f4a;
+  border-radius: 4px;
+  overflow: hidden;
+  margin-bottom: 8px;
+}
+
+.progress-fill {
+  height: 100%;
+  background: #4ea1ff;
+  border-radius: 4px;
+  transition: width 0.3s ease;
+}
+
+.goal-amounts {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  color: #b7bcc7;
+}
+
+.goal-actions {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.goal-actions .input {
+  flex: 1;
+}
+
+.goal-date {
+  font-size: 12px;
+  color: #b7bcc7;
+  text-align: center;
+}
+
+/* Reports */
+.report-results {
+  margin-top: 30px;
+}
+
+.category-breakdown {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin-top: 30px;
+}
+
+@media (max-width: 968px) {
+  .category-breakdown {
+    grid-template-columns: 1fr;
+  }
+}
+
+.breakdown-section {
+  background: #2a2f3a;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.breakdown-section h4 {
+  margin: 0 0 15px;
+  color: #e8e9ec;
+}
+
+/* Buttons */
+.btn {
+  padding: 10px 20px;
+  background: #4ea1ff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  transition: background 0.3s ease;
+}
+
+.btn:hover {
+  background: #3a8ae6;
+}
+
+.btn.small {
+  padding: 5px 10px;
+  font-size: 12px;
+}
+
+.btn.danger {
+  background: #ff6b6b;
+}
+
+.btn.danger:hover {
+  background: #e55a5a;
+}
+
+/* Alerts */
+.alert {
+  padding: 12px 15px;
+  border-radius: 4px;
+  margin: 15px 20px;
+  font-size: 14px;
+}
+
+.alert.error {
+  background: #ff6b6b20;
+  color: #ff6b6b;
+  border: 1px solid #ff6b6b40;
+}
+
+.alert.success {
+  background: #6bff8d20;
+  color: #6bff8d;
+  border: 1px solid #6bff8d40;
+}
+
+.loading {
+  text-align: center;
+  padding: 40px;
+  color: #b7bcc7;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .money-management {
+    padding: 10px 0;
+  }
+  
+  .tabs {
+    padding: 0 5px;
+  }
+  
+  .tab {
+    padding: 12px 15px;
+    font-size: 14px;
+  }
+  
+  .tab-content {
+    padding: 15px;
+  }
+  
+  .summary-cards {
+    grid-template-columns: 1fr;
+  }
+  
+  .charts {
+    grid-template-columns: 1fr;
+  }
+  
+  .table {
+    font-size: 12px;
+  }
+  
+  .table th,
+  .table td {
+    padding: 8px 10px;
+  }
+  
+  .goals-grid {
+    grid-template-columns: 1fr;
+  }
+}

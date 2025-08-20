@@ -1,0 +1,68 @@
+/* Add these styles to your existing CSS */
+
+/* Notes specific styles */
+.notes-grid {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
+
+.note-card {
+  background: var(--card);
+  border-radius: 12px;
+  padding: 16px;
+  border: 1px solid #2a2f3a;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.note-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+}
+
+.note-title {
+  color: var(--accent);
+  margin: 0 0 8px 0;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.note-description {
+  color: var(--text);
+  margin: 0 0 16px 0;
+  line-height: 1.5;
+  white-space: pre-wrap;
+}
+
+.note-actions {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.note-date {
+  color: var(--muted);
+  font-size: 12px;
+  margin-top: 8px;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .notes-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .note-actions {
+    flex-direction: column;
+  }
+  
+  .note-actions .btn {
+    width: 100%;
+  }
+}
+
+/* Textarea styling */
+textarea.input {
+  min-height: 100px;
+  font-family: inherit;
+}
