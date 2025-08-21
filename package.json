@@ -14,6 +14,7 @@
     "chart.js": "^4.5.0",
     "docx": "^9.5.1",
     "docx2pdf-converter": "^2.1.1",
+    "dompurify": "^3.2.6",
     "file-saver": "^2.0.5",
     "html2canvas": "^1.4.1",
     "jspdf": "^3.0.1",
