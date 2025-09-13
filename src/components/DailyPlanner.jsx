@@ -27,13 +27,13 @@ const DailyPlanner = () => {
       icon: "🍅",
       path: "/pomodoro"
     },
-    {
-      title: "Money Management",
-      description: "Track expenses and manage your budget effectively.",
-      icon: "💰",
-      path: "/money-management"
-    },
-  
+    // {
+    //   title: "Money Management",
+    //   description: "Track expenses and manage your budget effectively.",
+    //   icon: "💰",
+    //   path: "/money-management"
+    // }
+  ,
    
     {
       title: "Habit Builder",
