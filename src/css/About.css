@@ -1,0 +1,108 @@
+.about-container {
+  max-width: 900px;
+  margin: auto;
+  padding: 2rem 1rem;
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  color: #f0f0f0; /* Light text for dark background */
+  background: #0d1117; /* Dark background matching your site */
+}
+
+.about-container h1 {
+  text-align: center;
+  margin-bottom: 1rem;
+  font-size: 2.5rem;
+  background: linear-gradient(90deg, #0077ff, #ff5722);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.intro {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #ccc;
+}
+
+.feature-section {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  margin: 2rem 0;
+  background: #161b22; /* Slightly lighter dark card */
+  padding: 1.5rem;
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-section:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.7);
+}
+
+.feature-section .icon {
+  font-size: 2.5rem;
+  color: #ff5722;
+  flex-shrink: 0;
+}
+
+.feature-section h2 {
+  color: #00d1ff;
+  margin-bottom: 0.5rem;
+}
+
+.closing {
+  text-align: center;
+  margin-top: 2rem;
+  font-weight: bold;
+  color: #aaa;
+  font-size: 1.2rem;
+}
+
+/* Responsive for tablets */
+@media (max-width: 768px) {
+  .about-container h1 {
+    font-size: 2rem;
+  }
+
+  .feature-section {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .feature-section .icon {
+    margin-bottom: 0.5rem;
+  }
+
+  .feature-section h2 {
+    font-size: 1.4rem;
+  }
+}
+
+/* Responsive for mobile */
+@media (max-width: 480px) {
+  .about-container {
+    padding: 1rem 0.5rem;
+  }
+
+  .about-container h1 {
+    font-size: 1.8rem;
+  }
+
+  .feature-section {
+    padding: 1rem;
+  }
+
+  .feature-section h2 {
+    font-size: 1.2rem;
+  }
+
+  .feature-section .icon {
+    font-size: 2rem;
+  }
+
+  .closing {
+    font-size: 1rem;
+  }
+}
