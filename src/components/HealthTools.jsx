@@ -10,10 +10,10 @@ const HealthTools = () => {
 
   const tools = [
     {
-      title: "BMR Calculator",
-      description: "Calculate your Basal Metabolic Rate to understand your calorie needs.",
+      title: "BMI Calculator",
+      description: "Calculate your Body Mass Index to understand your weight category.",
       icon: "📊",
-      path: "/bmr"
+      path: "/bmi"
     },
     {
       title: "Calorie Tracker",
@@ -23,12 +23,12 @@ const HealthTools = () => {
     },
    
   
-    {
-      title: "Meal Planner",
-      description: "Plan your meals according to your nutritional needs.",
-      icon: "🍽️",
-      path: "/meal-planner"
-    },
+    // {
+    //   title: "Meal Planner",
+    //   description: "Plan your meals according to your nutritional needs.",
+    //   icon: "🍽️",
+    //   path: "/meal-planner"
+    // },
     {
       title: "BMR Calculator",
       description: "Calculate your Basal Metabolic Rate for weight management.",
@@ -39,7 +39,7 @@ const HealthTools = () => {
       title: "Body Fat Calculator",
       description: "Estimate your body fat percentage with various methods.",
       icon: "🔍",
-      path: "/body-fat"
+      path: "/body-fat-calculator"
     }
   ];
 
