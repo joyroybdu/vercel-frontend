@@ -1,6 +1,7 @@
 
 import { Route, Routes, Navigate } from 'react-router-dom';
 import Navbar from './components/Navbar';
+import Footer from './components/Footer';
 import Home from './pages/Home';
 import Login from './pages/Login';
 import Signup from './pages/Signup';
@@ -19,11 +20,15 @@ import CalorieTracker from './pages/CalorieTracker';
 import AIRecommendations from './pages/AIRecommendations';
 import Analytics from './pages/Analytics';
 import HabitHome from './pages/HabitHome';
+import BodyFatCalculator from './pages/BodyFatCalculator';
+import BMICalculator from './pages/BMICalculator';
 
 
 import { useAuth } from './context/AuthContext';
 import { TasksProvider } from './context/TasksContext';
 import Habits from './pages/Habits';
+import About from './pages/About';
+
 
 function Protected({ children }) {
   const { user, loading } = useAuth();
@@ -34,10 +39,12 @@ function Protected({ children }) {
 export default function App() {
   return (
     <>
+    
       <Navbar />
       <TasksProvider>
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<Signup />} />
           <Route path="/profile" element={<Protected><Profile /></Protected>} />
@@ -62,10 +69,14 @@ export default function App() {
           <Route path="/ai-recommendations" element={<Protected><AIRecommendations /></Protected>} />
           <Route path="/analytics" element={<Protected><Analytics /></Protected>} />
            <Route path="/habit" element={<Protected><Habits /></Protected>} />
+           <Route path="/body-fat-calculator" element={<Protected><BodyFatCalculator /></Protected>} />
+           <Route path="/bmi" element={<Protected><BMICalculator /></Protected>} />
 
           <Route path="*" element={<Navigate to="/" />} />
         </Routes>
       </TasksProvider>
+      
+      <Footer />
     </>
   );
 }
